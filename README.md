@@ -1,0 +1,1 @@
+Ce dépôt contient les fichiers de mon site web personnel. Il représente également ma soumission pour le projet de développement web. Ce site a été conçu pour démontrer mes compétences en développement web et inclut diverses fonctionnalités et technologies que j'ai apprises.
