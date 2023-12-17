@@ -97,6 +97,7 @@ body {
 }
 
 .project {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #ccc; 
     border-radius: 8px; 
     padding: 15px;
@@ -135,6 +136,11 @@ body {
     top: 0;
 }
 
+.project:hover, .project-hovered {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
 .blog {
     text-align: center;
     padding: 20px;
@@ -161,6 +167,12 @@ body {
 .skill-set {
     text-align: center; 
     margin-bottom: 20px; 
+    transition: transform 0.3s ease;
+}
+
+.skill-set:hover {
+    transform: scale(1.1); 
+    z-index: 1; 
 }
 
 .skill-list {
@@ -177,6 +189,21 @@ body {
     margin: 0 10px; 
     height: 40px; 
 }
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.skill-list img:hover + .tooltip {
+    opacity: 1; 
+    visibility: visible; 
+}
+
 
 .timeline {
     position: relative;
@@ -322,7 +349,86 @@ body {
     }
 }
 
+.side-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333; 
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 120px;
+}
 
+.side-panel a {
+    padding: 5px 10px;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    color: white; 
+    display: block;
+    transition: 0.3s;
+}
+
+.side-panel a:hover {
+    color: #f1f1f1; 
+    background-color: #ddd; 
+}
+
+.navigation__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding-left: 5px; 
+}
+
+.navigation__logo, .menu-button {
+    margin-bottom: 5px;
+}
+.menu-button {
+    margin-top: 15px; 
+    padding-left: 5px;
+}
+
+.project.highlighted {
+    border: 2px solid #0056b3; 
+    padding: 12px; 
+}
+
+.certification, .course {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer; 
+}
+
+.certification:hover {
+    background-color: #00c9ff; 
+    box-shadow: 0 0 10px #00c9ff, 0 0 25px #00c9ff, 0 0 50px #00c9ff;
+}
+
+.course:hover {
+    background-color: #ff00ff; 
+    box-shadow: 0 0 10px #ff00ff, 0 0 25px #ff00ff, 0 0 50px #ff00ff; 
+}
+
+.hover-message {
+    position: absolute;
+    max-width: 200px; 
+    word-wrap: break-word; 
+    font-size: 0.9em; 
+    padding: 8px; 
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 4px;
+    text-align: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+    z-index: 100; 
+}
+
+.contact__visual img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
 
 
 

@@ -11,20 +11,21 @@
                 <a class="navigation__logo logo" href="../index.html">
                     <img src="../img/logo.webp" alt="Logo" width="60" height="60"/>
                 </a>
-                <nav class="navigation__container">
-                    <ul class="navigation__list">
-                        <li><a href="../index.html">Accueil</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="cv.html">CV</a></li>
-                        <li><a href="aboutme.html">À propos de moi</a></li>
-                        <li><a href="competences.html">Compétences &amp; Expertise</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="courses.html">Certifications &amp; Cours</a></li>
-                    </ul>
-                </nav>
+                <button onclick="toggleSidePanel()">☰</button>
             </div>
         </div>
     </header>
+
+    <!-- Side Panel -->
+    <div id="sidePanel" class="side-panel">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="aboutme.html">À propos de moi</a></li>
+        <li><a href="competences.html">Compétences &amp; Expertise</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="courses.html">Certifications &amp; Cours</a></li>
+    </div>
 
     <main role="main">
         <section class="contact" id="contact">
@@ -34,7 +35,7 @@
                 
                 <div class="contact__section">
                     <h3 class="contact__section-header">Formulaire de Contact</h3>
-                    <form class="contact__form" action="submitForm" method="post">
+                    <form class="contact__form" method="post">
                         <div class="form-group">
                             <label for="name">Votre Nom</label>
                             <input id="name" class="form-control" placeholder="Votre Nom" spellcheck="false" type="text" required/>
@@ -71,11 +72,11 @@
     
     <footer class="footer">
         <div class="footer__wrapper wrapper--large">
-            <p class="footer__copyright no-margin">© 2022 - Esprit</p>
+            <p class="footer__copyright no-margin">© 2023 - Esprit</p>
         </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="js/functions-min.js"></script>
+    <script src="../js/functions-min.js"></script>
 </body>
 </html>
